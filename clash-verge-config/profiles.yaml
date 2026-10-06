@@ -1,0 +1,108 @@
+# Profiles Config for Clash Verge
+
+current: RzGxgc7E67d1
+items:
+- uid: Merge
+  type: merge
+  name: null
+  file: Merge.yaml
+  updated: 1778680403
+- uid: Script
+  type: script
+  name: null
+  file: Script.js
+  updated: 1778680403
+- uid: mTMP0hFVPMNl
+  type: merge
+  name: null
+  file: mTMP0hFVPMNl.yaml
+  updated: 1787792548
+- uid: s6Lc0qY3qDS5
+  type: script
+  name: null
+  file: s6Lc0qY3qDS5.js
+  updated: 1787792548
+- uid: rJXs5pXXc549
+  type: rules
+  name: null
+  file: rJXs5pXXc549.yaml
+  updated: 1787792548
+- uid: p8JnlHzYxm5u
+  type: proxies
+  name: null
+  file: p8JnlHzYxm5u.yaml
+  updated: 1787792548
+- uid: gyaZE0hbmEkF
+  type: groups
+  name: null
+  file: gyaZE0hbmEkF.yaml
+  updated: 1787792548
+- uid: RZrW05KOxZzj
+  type: remote
+  name: 良心云
+  file: RZrW05KOxZzj.yaml
+  url: https://liangxin.xyz/api/v1/liangxin?OwO=4db5733dd040467a61dd3904cd70ebe7
+  selected:
+  - name: 良心云
+    now: 🇸🇬新加坡专线02|BGP|流媒体
+  extra:
+    upload: 5001043908
+    download: 96838778132
+    total: 1099511627776
+    expire: 0
+  updated: 1791255013
+  option:
+    update_interval: 1440
+    allow_auto_update: true
+    merge: mTMP0hFVPMNl
+    script: s6Lc0qY3qDS5
+    rules: rJXs5pXXc549
+    proxies: p8JnlHzYxm5u
+    groups: gyaZE0hbmEkF
+- uid: m1fn8VqKHyzG
+  type: merge
+  name: null
+  file: m1fn8VqKHyzG.yaml
+  updated: 1790124603
+- uid: sVwTysSWCoOF
+  type: script
+  name: null
+  file: sVwTysSWCoOF.js
+  updated: 1790124603
+- uid: rK6YJYN6Nomk
+  type: rules
+  name: null
+  file: rK6YJYN6Nomk.yaml
+  updated: 1790124603
+- uid: p8OA1thCLmtr
+  type: proxies
+  name: null
+  file: p8OA1thCLmtr.yaml
+  updated: 1790124603
+- uid: gUg08ifNdQoV
+  type: groups
+  name: null
+  file: gUg08ifNdQoV.yaml
+  updated: 1790124603
+- uid: RzGxgc7E67d1
+  type: remote
+  name: Bucd
+  file: RzGxgc7E67d1.yaml
+  desc: ''
+  url: https://488113.xyz/t/p/07012319d7a2a04d51811d851dde8339
+  extra:
+    upload: 138758053
+    download: 1941039934
+    total: 53687091200
+    expire: 1808309338
+  updated: 1791255014
+  option:
+    with_proxy: false
+    self_proxy: false
+    update_interval: 1440
+    allow_auto_update: true
+    merge: m1fn8VqKHyzG
+    script: sVwTysSWCoOF
+    rules: rK6YJYN6Nomk
+    proxies: p8OA1thCLmtr
+    groups: gUg08ifNdQoV

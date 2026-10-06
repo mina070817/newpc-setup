@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Set Proxy
+Exec=__HOME__/set_proxy_gui.sh
+X-GNOME-Autostart-enabled=true
+Terminal=false
