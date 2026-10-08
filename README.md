@@ -99,6 +99,7 @@ bash ~/Desktop/newpc-setup/脚本/install_worklog_hook.sh
 - **Wayland 会踩坑**：搜狗输入法只在 Xorg 会话下稳定；redshift 的 `adjustment-method=randr` 在 Wayland 下失效。装完注销，在登录界面点右下角齿轮选 **Ubuntu on Xorg** 再登录。
 - **隐私**：`clash-verge-config/` 里有机场订阅和节点信息，`codex安装.md` 里有代理凭据，别把这个文件夹往外传。
 - **Codex 钩子要授权**：装完工作日志钩子后，第一次开新会话 Codex 会问是否信任该钩子，选信任/允许，之后才会自动建日志文件。
+- **日志目录名可各机不同**：改 `~/.codex/work-log.sh` 里的 `note_name` 就能换日志根目录（默认 `cyf_note`）；重跑 `install_worklog_hook.sh` 会保留本机已改过的名字，不会被仓库默认值冲掉。
 - **联网**：素材绝大多数是离线的，只有 zsh 那步（Oh My Zsh、两个插件）和 Clash Verge 本体需要联网。GitHub 拉不动时先配好代理再跑。
 - **幂等**：各脚本都有「已存在就跳过」的判断，在配好的机器上重复跑一般安全；`install_redshift_eyecare.sh` 覆盖前会先备份 `~/.config/redshift.conf`。
 - **跑完可删**：全部配好后 `newpc-setup/` 就可以删掉；删之前先确认不再需要里面的订阅信息。

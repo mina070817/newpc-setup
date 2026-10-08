@@ -31,9 +31,17 @@ echo "=== 1/3 安装 $codex_dir/work-log.sh ==="
 if [ -f "$codex_dir/work-log.sh" ]; then
     cp -p "$codex_dir/work-log.sh" "$codex_dir/work-log.sh.bak-$stamp"
     echo "已备份旧脚本到 work-log.sh.bak-$stamp"
+    # 记住本机已经改过的日志目录名，安装后原样恢复，避免把自定义设置冲掉。
+    old_note=$(sed -n 's/^note_name="\(.*\)"$/\1/p' "$codex_dir/work-log.sh" | head -1)
 fi
 cp "$worklog_src" "$codex_dir/work-log.sh"
 chmod +x "$codex_dir/work-log.sh"
+# 只接受安全的目录名，避免把奇怪字符塞进 sed 表达式。
+if [ -n "${old_note:-}" ] && [ "$old_note" != "cyf_note" ] \
+   && printf '%s' "$old_note" | grep -qE '^[A-Za-z0-9_-]+$'; then
+    sed -i "s|^note_name=\"cyf_note\"$|note_name=\"$old_note\"|" "$codex_dir/work-log.sh"
+    echo "保留了本机原有的日志目录名：$old_note"
+fi
 ls -l "$codex_dir/work-log.sh"
 
 echo "=== 2/3 写入 $codex_dir/hooks.json ==="
