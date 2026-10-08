@@ -87,7 +87,15 @@ fi
 
 HTTP_URL="http://127.0.0.1:${HTTP}"
 SOCKS_URL="socks5://127.0.0.1:${SOCKS}"
-NO_PROXY_VAL="localhost,127.0.0.1,::1"
+# 注意：no_proxy 必须让机器人流量直连，否则 ROS1 的 Python 工具链
+# （roslaunch/rosnode/rostopic/rospy 走 urllib，会读 http_proxy）会把发往
+# 机器狗的请求丢给代理。机器狗 master = 192.168.123.1:11311。
+#
+# ⚠ 关键坑：Python 的 urllib/requests 和 curl(7.68, 20.04 自带) **只做后缀匹配，
+#   不解析 CIDR**，所以 "192.168.0.0/16" 这种写法对它们无效，必须写具体 IP。
+#   实测：no_proxy 含 192.168.123.1 → urllib.proxy_bypass 返回 True；含 /16 返回 False。
+#   CIDR 仍然保留，给 curl>=7.86 / clash 自身等新工具用。
+NO_PROXY_VAL="localhost,127.0.0.1,::1,192.168.123.1,192.168.123.18,192.168.123.161,172.16.100.71,172.16.100.180,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12"
 
 apply_exports() {
   if [ "$CLASH_UP" = "1" ]; then

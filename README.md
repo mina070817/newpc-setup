@@ -103,6 +103,15 @@ bash ~/Desktop/newpc-setup/脚本/install_reuse_skill.sh
 
 ## 必读注意事项
 
+- **搜狗要补一个系统库**：`install_sogou_ubuntu*.sh` 里除了 fcitx，还会装 `libgsettings-qt1`。
+  搜狗 deb 的 `postinst` 会把自己带的旧 Qt5 目录 `/opt/sogoupinyin/files/lib/qt5` 改名成 `qt5.bak`
+  （改用系统库），而它需要的 `libgsettings-qt.so.1` 只在 `libgsettings-qt1` 里，deb 的 `Depends` 没声明。
+  漏装的话 `sogoupinyin-service` 起不来、fcitx 退成僵尸进程，症状是「装完搜狗还是打不了中文」。
+  手动补：`sudo apt install -y libgsettings-qt1`。
+- **代理的 no_proxy 必须写具体 IP**：`set_proxy_gui.sh` 写的 `/etc/profile.d/proxy.sh` 是登录级代理，
+  bash 和 GUI 程序都靠它。里面 `no_proxy` 固定包含 `192.168.123.1,192.168.123.18`（机器狗）。
+  Python 的 `urllib` 和 Ubuntu 20.04 的 curl 7.68 **不解析 CIDR**，只写 `192.168.0.0/16` 挡不住，
+  机器狗的 ROS 流量会被丢给 Clash 而连不上。
 - **Wayland 会踩坑**：搜狗输入法只在 Xorg 会话下稳定；redshift 的 `adjustment-method=randr` 在 Wayland 下失效。装完注销，在登录界面点右下角齿轮选 **Ubuntu on Xorg** 再登录。
 - **隐私**：`clash-verge-config/` 里有机场订阅和节点信息，`codex安装.md` 里有代理凭据，别把这个文件夹往外传。
 - **Codex 钩子要授权**：装完工作日志钩子后，第一次开新会话 Codex 会问是否信任该钩子，选信任/允许，之后才会自动建日志文件。
