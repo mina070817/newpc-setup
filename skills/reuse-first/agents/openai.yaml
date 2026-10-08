@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reuse First"
+  short_description: "Search GitHub for an existing solution before building"
+  default_prompt: "Use $reuse-first to check whether something already solves this before writing it from scratch."

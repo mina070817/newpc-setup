@@ -16,7 +16,8 @@ newpc-setup/
 │   ├── install_sogou_ubuntu2004.sh / install_sogou_ubuntu2204.sh
 │   ├── install_redshift_eyecare.sh          # 20.04 / 22.04 通用
 │   ├── install_codex_ubuntu2004.sh / install_codex_ubuntu2204.sh
-│   └── install_worklog_hook.sh              # Codex 会话工作日志钩子
+│   ├── install_worklog_hook.sh              # Codex 会话工作日志钩子
+│   └── install_reuse_skill.sh               # 安装 reuse-first skill
 ├── 配置/                      # 从旧电脑带过来的配置文件
 │   ├── zshrc                  # 定制 .zshrc，含 __HOME__ 占位符
 │   ├── fzf.zsh                # fzf 的 zsh 集成（备用）
@@ -28,6 +29,8 @@ newpc-setup/
 │   ├── Clash Verge.desktop
 │   └── set-proxy.desktop      # 登录时弹窗设置代理
 ├── clash-verge-config/        # Clash Verge Rev 的完整配置目录（含订阅与节点）
+├── skills/                    # Codex skill 原样打包，装到 ~/.codex/skills/
+│   └── reuse-first/           # 动手前先搜 GitHub 有没有现成方案
 └── 输入法/                    # 搜狗输入法 deb 包
 ```
 
@@ -41,6 +44,7 @@ newpc-setup/
 | 开机代理 | Clash Verge Rev，并在开终端时自动注入代理变量 | `clash-verge-config/` + `配置/clash-proxy.sh` + `autostart/` |
 | Codex CLI（可选） | 装 Codex CLI 并接入 DeepSeek | `脚本/install_codex_ubuntu*.sh` + `codex安装.md` |
 | Codex 工作日志（可选） | 每次开 Codex 会话，自动在桌面生成当日工作日志文件 | `脚本/install_worklog_hook.sh` + `配置/work-log.sh` + `配置/hooks.json` |
+| reuse-first skill（可选） | 动手写脚本/工具前先搜 GitHub 有没有现成方案，避免重复造轮子 | `脚本/install_reuse_skill.sh` + `skills/reuse-first/` |
 
 ## 怎么用
 
@@ -90,6 +94,9 @@ bash ~/Desktop/newpc-setup/脚本/install_codex_ubuntu2204.sh
 
 # 6. 可选：Codex 会话工作日志钩子（不要加 sudo）
 bash ~/Desktop/newpc-setup/脚本/install_worklog_hook.sh
+
+# 7. 可选：reuse-first skill（不要加 sudo）
+bash ~/Desktop/newpc-setup/脚本/install_reuse_skill.sh
 ```
 
 `配置/zshrc` 是从旧电脑带过来的，里面有些路径只在本机存在（opencode、anaconda3、ROS 2 Humble、turtlebot3 工作空间等）。新电脑上没有的要整行注释掉，否则每次开终端都会报错。必须保留的是 `ZSH_THEME`、`plugins=(...)`、npm global bin 那行，以及最后加载 `~/.codex/clash-proxy.sh` 的两行。逐项清单见 `提示词.md` 第 1 节。
