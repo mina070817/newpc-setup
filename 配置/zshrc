@@ -103,7 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # opencode
-export PATH=__HOME__/.opencode/bin:$PATH
+# 本机没有 ~/.opencode，注释掉（原行：export PATH=__HOME__/.opencode/bin:$PATH）
+# export PATH=__HOME__/.opencode/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -120,15 +121,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source /opt/ros/humble/setup.zsh
+# 本机没有 /opt/ros/humble（只有 foxy/noetic），整行注释
+#source /opt/ros/humble/setup.zsh
 #source /opt/ros/humble/setup.zsh
 #source ~/Desktop/rm/pb2025_sentry_ws/install/setup.zsh
 #source /opt/ros/humble/setup.zsh
 #source ~/Desktop/rm/pb2025_sentry_ws/install/setup.zsh
-source /opt/ros/humble/setup.zsh
-source ~/turtlebot3_ws/install/setup.zsh
-export TURTLEBOT3_MODEL=burger
-export GAZEBO_MODEL_DATABASE_URI=""
+#source /opt/ros/humble/setup.zsh
+# 本机没有 ~/turtlebot3_ws，整行注释
+#source ~/turtlebot3_ws/install/setup.zsh
+#export TURTLEBOT3_MODEL=burger
+#export GAZEBO_MODEL_DATABASE_URI=""
+
+# ── ROS1 机器狗（与 ~/.bashrc 第154-155行保持一致）──────────────────
+# 切到 zsh 后新终端不再读 ~/.bashrc，rob_1_start.sh 靠父 shell 继承这两个变量，
+# 不补上的话 start_system.sh 会退回 localhost:11311，连不上机器狗。
+export ROS_MASTER_URI=http://192.168.123.1:11311
+export ROS_IP=192.168.123.1
 
 # npm global bin
 export PATH="$HOME/.npm-global/bin:$PATH"

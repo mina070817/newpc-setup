@@ -1,0 +1,687 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29, 114.114.114.114]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    respect-rules: true
+    proxy-server-nameserver: [223.5.5.5, 119.29.29.29, 114.114.114.114]
+    nameserver: [223.5.5.5, 119.29.29.29, 114.114.114.114]
+    fallback: ['https://doh.dns.apple.com/dns-query', 'tls://8.8.8.8:853', 'tls://1.1.1.1:853', 'https://dns.google/dns-query']
+    fallback-filter: { geoip: true, geoip-code: CN, ipcidr: [240.0.0.0/4], domain: [+.google.com, '+.google.*', +.gstatic.com, +.ggpht.com, +.googleapis.com, +.googleusercontent.com, +.googlevideo.com, +.youtube.com, +.youtu.be, +.gmail.com, +.googlemail.com, +.facebook.com, +.fb.com, +.fbcdn.net, +.messenger.com, +.twitter.com, +.twimg.com, +.t.co, +.instagram.com, +.cdninstagram.com, +.tiktok.com, +.tiktokcdn.com, +.byteoversea.com, +.musical.ly, +.reddit.com, +.redditmedia.com, +.redd.it, +.telegram.org, +.t.me, +.telegram.me, +.tdesktop.com, +.whatsapp.com, +.whatsapp.net, +.discord.com, +.discordapp.com, +.discordapp.net, +.netflix.com, +.nflxvideo.net, +.nflximg.net, +.nflxso.net, +.nflxext.com, +.disneyplus.com, +.disney-plus.net, +.disney.com, +.spotify.com, +.scdn.co, +.github.com, +.githubusercontent.com, +.githubassets.com, +.wikipedia.org, +.wikimedia.org, +.medium.com, +.dropbox.com, +.dropboxusercontent.com, +.twitch.tv, +.ttvnw.net, +.jtvnw.net, +.pinterest.com, +.pinimg.com, +.vimeo.com, +.vimeocdn.com, +.blogspot.com, +.wordpress.com, +.wp.com, +.bbc.com, +.bbci.co.uk, +.nytimes.com, +.wsj.com, +.bloomberg.com, +.openai.com, +.chat.openai.com, +.api.openai.com, +.anthropic.com, +.claude.ai, +.perplexity.ai] }
+proxies:
+    - { name: ✅官网续费vgvg.vg关vpn访问✅, type: vless, server: 108.181.253.107, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: '🎉rst:14d/99.99 GB/返佣:60%🎉', type: vless, server: 108.181.253.107, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: '⚠️exp:20260407没网卸旧装新⚠️', type: vless, server: 108.181.253.107, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国-DAL大带宽-rl(主力), type: vless, server: 108.181.253.107, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国-美西极速-rl(主力), type: vless, server: 15.204.87.166, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: Scaleway荷兰极速-rl(主力), type: vless, server: 51.158.148.53, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国-LA极速ccs-rl(主力), type: vless, server: 107.174.52.175, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国-LA大带宽-rl(禁联通), type: vless, server: 173.224.219.79, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaSFO-rl(主力A), type: vless, server: 23.82.125.220, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaSFO-rl(主力B), type: vless, server: 23.82.125.221, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国-美西极速-手机畅享(主力), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: ymwrs5x-uza.682004.xyz }
+    - { name: Scaleway荷兰极速-手机畅享(主力), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: as4zbp7y8qv4jf2eup.682008.xyz }
+    - { name: 拉斯维加斯-rl(主力), type: vless, server: 209.141.34.233, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国法兰克福-rl(主力), type: vless, server: 46.38.243.197, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaLAX-rl(主力B), type: vless, server: 23.80.81.224, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaLAX-rl(主力C), type: vless, server: 23.19.230.221, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaLAX-rl(主力D), type: vless, server: 23.19.230.245, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaLAX-rl(主力A), type: vless, server: 23.80.81.225, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaMNZ-rl(主力qvq), type: vless, server: 207.58.174.115, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国LisaMNZ-rl(主力ovo), type: vless, server: 207.58.174.138, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国法兰克福-手机畅享(多线聚合), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: yigr09.682002.xyz }
+    - { name: 美国洛杉矶LA-手机畅享(主力ovo), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: 1l1rdni4i8.682001.xyz }
+    - { name: 美国洛杉矶LA-手机畅享(主力qvq), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: 17x0a1vso049x.682001.xyz }
+    - { name: 德国法兰克福-手机畅享(主力), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: anpnwkh32x40q1i2.682002.xyz }
+    - { name: 拉斯维加斯-手机畅享(主力), type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: ia4p71dpglvfber5i2v8.682003.xyz }
+    - { name: 日本01-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: 3hl4v1guf3br5x.682006.xyz }
+    - { name: 韩国01-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: auhnlea251ai3em.682007.xyz }
+    - { name: 新加坡01-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: 9onbk02cv0gydtsc373.682005.xyz }
+    - { name: 韩国02-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: syb39ki.682007.xyz }
+    - { name: 新加坡02-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: v92wp68o0ipi.682005.xyz }
+    - { name: 瑞士-rl(主力), type: vless, server: 104.244.74.67, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国法兰克福-rl(多线聚合), type: vless, server: rl-de01.622228.xyz, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 新加坡Lisa-rl, type: vless, server: 142.91.103.25, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 新加坡Lisa-hy2hop, server: 142.91.103.25, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: Scaleway荷兰极速-hy2(主力), server: 51.158.148.53, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国洛杉矶LA-hy2hop(主力ovo), server: 173.224.219.79, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国洛杉矶LA-hy2hop(主力qvq), server: 173.224.219.224, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaMNZ-hy2hop(主力ovo), server: 207.58.174.138, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaMNZ-hy2hop(主力qvq), server: 207.58.174.115, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaLAX-hy2hop(主力A), server: 23.80.81.225, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaSFO-hy2hop(主力A), server: 23.82.125.220, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaSFO-hy2hop(主力B), server: 23.82.125.221, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaLAX-hy2hop(主力B), server: 23.80.81.224, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaLAX-hy2hop(主力C), server: 23.19.230.221, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国LisaLAX-hy2hop(主力D), server: 23.19.230.245, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国法兰克福-hy2hop(主力), server: 46.38.243.197, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 瑞士-hy2hop(主力), server: 104.244.74.67, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 加拿大极速-rl, type: vless, server: 155.94.236.237, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 法国-rl, type: vless, server: 51.254.44.49, port: 8501, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国休斯顿DN1(电信)-rl, type: vless, server: 166.88.142.180, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国休斯顿DN2(电信)-rl, type: vless, server: 166.88.142.182, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 加拿大极速-hy2hop, server: 155.94.236.237, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国休斯顿DN1(电信)-hy2hop, server: 166.88.142.180, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国休斯顿DN2(电信)-hy2hop, server: 166.88.142.182, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国法兰克福-hy2hop(多线聚合), server: rl-de01.622228.xyz, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 英国01-rl, type: vless, server: 78.129.249.118, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 英国02-rl, type: vless, server: 141.147.82.124, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 印度-rl, type: vless, server: 129.159.19.229, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 英国01-hy2hop, server: 78.129.249.118, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 英国02-hy2hop, server: 141.147.82.124, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 印度-hy2hop, server: 129.159.19.229, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国01-rl, type: vless, server: 188.68.53.103, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国02-rl, type: vless, server: 37.120.168.111, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国03-rl, type: vless, server: 46.38.254.236, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 德国04-rl, type: vless, server: 202.61.236.66, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南河内1-rl(移动优选), type: vless, server: 103.69.188.119, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南河内1-hy2hop(移动), server: 103.69.188.119, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 越南河内2-rl(移动优选), type: vless, server: 103.69.188.191, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南河内2-hy2hop(移动), server: 103.69.188.191, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 越南河内3-rl(移动优选), type: vless, server: 103.69.188.192, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南河内3-hy2hop(移动), server: 103.69.188.192, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 越南河内4-rl(移动优选), type: vless, server: 103.77.215.181, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南河内4-hy2hop(移动), server: 103.77.215.181, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 越南胡志明-rl, type: vless, server: 103.27.61.248, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 越南胡志明-hy2hop, server: 103.27.61.248, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 越南胡志明-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: media-vn001.622228.xyz }
+    - { name: 美国极速芝加哥-rl, type: vless, server: 204.44.100.31, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 爱尔兰Dublin-rl, type: vless, server: 107.175.59.147, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国芝加哥-hy2hop, server: 204.44.100.31, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: Premium-台湾顶级商宽-新北2, type: vless, server: 1000tw.duboji.vip, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: firefox, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: Premium-土耳其顶级商宽01, type: vless, server: 185.219.133.209, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: firefox, servername: addons.mozilla.org, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速01-rl, type: vless, server: 74.48.56.173, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速02-rl, type: vless, server: 199.255.99.248, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速03-rl, type: vless, server: 74.48.85.114, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速04-rl, type: vless, server: 148.135.76.162, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速05-rl, type: vless, server: 74.48.164.75, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速06-rl, type: vless, server: 185.77.226.139, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速07-rl, type: vless, server: 74.48.96.6, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速08-rl, type: vless, server: 185.77.226.182, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速09-rl, type: vless, server: 142.171.164.205, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速10-rl, type: vless, server: 134.195.209.160, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速11-rl, type: vless, server: 142.171.68.237, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速12-rl, type: vless, server: 104.156.140.113, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速13-rl, type: vless, server: 134.195.209.199, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速14-rl, type: vless, server: 74.48.121.216, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速15-rl, type: vless, server: 142.171.118.62, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速16-rl, type: vless, server: 142.171.44.180, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 新加坡01-rl, type: vless, server: 192.124.176.246, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 新加坡02-rl, type: vless, server: 192.124.176.147, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 香港RIPENCC-rl, type: vless, server: 91.149.237.102, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 香港极速版-rl, type: vless, server: 151.247.88.112, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: Premium体验-日本极速-rl, type: vless, server: 143.14.107.50, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 香港HKT01-rl, type: vless, server: 154.16.183.48, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 香港HKT02-rl, type: vless, server: 45.149.92.227, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 香港HKT-hy2hop, server: 154.16.183.146, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 香港RIPENCC-手机畅享, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: media-hk001.622228.xyz }
+    - { name: 香港HKT-手机极速版, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: k61psiujfg-3l195-y.622228.xyz }
+    - { name: 香港HKT-手机畅享1, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: 4hoky.586668.xyz }
+    - { name: 香港HKT-手机畅享2, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: x5jsbar4s0qe0m4.586668.xyz }
+    - { name: 香港HKT-手机畅享3, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media }, sni: znthid0d60x-m.586668.xyz }
+    - { name: 日本01-rl, type: vless, server: 185.141.219.68, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 俄罗斯CN2-rl, type: vless, server: 45.130.147.121, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 乌克兰-rl, type: vless, server: 88.151.195.58, port: 52012, uuid: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: a9uk_ZJLsVC_MY4CIa-d1aP5bagweyHUPR6O932-dC8, short-id: 24b05fcf3723e6af } }
+    - { name: 美国极速01-hy2hop, server: 74.48.56.173, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速02-hy2hop, server: 199.255.99.248, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速03-hy2hop, server: 74.48.85.114, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速04-hy2hop, server: 148.135.76.162, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速05-hy2hop, server: 74.48.164.75, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速06-hy2hop, server: 185.77.226.139, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速07-hy2hop, server: 74.48.96.6, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速08-hy2hop, server: 185.77.226.182, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速09-hy2hop, server: 142.171.164.205, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速10-hy2hop, server: 134.195.209.160, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速11-hy2hop, server: 142.171.68.237, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速12-hy2hop, server: 104.156.140.113, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速13-hy2hop, server: 134.195.209.199, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速14-hy2hop, server: 74.48.121.216, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速15-hy2hop, server: 142.171.118.62, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国极速16-hy2hop, server: 142.171.44.180, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国ccsLA1-hy2hop(电信联通), server: 107.173.10.62, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国ccsLA2-hy2hop(电信联通), server: 192.3.232.253, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国ccsLA3-hy2hop(电信联通), server: 107.173.39.4, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国ccsLA4-hy2hop(电信联通), server: 107.173.39.105, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 美国ccsLA5-hy2hop(电信联通), server: 107.174.52.175, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国01-hy2hop, server: 188.68.53.103, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国02-hy2hop, server: 37.120.168.111, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国03-hy2hop, server: 46.38.254.236, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 德国04-hy2hop, server: 202.61.236.66, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 爱尔兰Dublin-hy2hop, server: 107.175.59.147, port: 52013, ports: 52013-62013, mport: 52013-62013, udp: true, skip-cert-verify: true, sni: files.xjqxz.top, type: hysteria2, password: 9e998e47-2844-4b17-a34b-67498461a86c }
+    - { name: 【2024之前的软件无法使用】, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media, headers: { Host: media-psychz001.622228.xyz } }, sni: media-psychz001.622228.xyz }
+    - { name: 【用不了下载本站最新软件】, type: trojan, server: cf.622228.xyz, port: 443, password: 9e998e47-2844-4b17-a34b-67498461a86c, udp: true, network: ws, ws-opts: { path: /media, headers: { Host: media-psychz002.622228.xyz } }, sni: media-psychz002.622228.xyz }
+proxy-groups:
+    - { name: 一元机场.VIP, type: select, proxies: [自动选择, 故障转移, ✅官网续费vgvg.vg关vpn访问✅, '🎉rst:14d/99.99 GB/返佣:60%🎉', '⚠️exp:20260407没网卸旧装新⚠️', 美国-DAL大带宽-rl(主力), 美国-美西极速-rl(主力), Scaleway荷兰极速-rl(主力), 美国-LA极速ccs-rl(主力), 美国-LA大带宽-rl(禁联通), 美国LisaSFO-rl(主力A), 美国LisaSFO-rl(主力B), 美国-美西极速-手机畅享(主力), Scaleway荷兰极速-手机畅享(主力), 拉斯维加斯-rl(主力), 德国法兰克福-rl(主力), 美国LisaLAX-rl(主力B), 美国LisaLAX-rl(主力C), 美国LisaLAX-rl(主力D), 美国LisaLAX-rl(主力A), 美国LisaMNZ-rl(主力qvq), 美国LisaMNZ-rl(主力ovo), 德国法兰克福-手机畅享(多线聚合), 美国洛杉矶LA-手机畅享(主力ovo), 美国洛杉矶LA-手机畅享(主力qvq), 德国法兰克福-手机畅享(主力), 拉斯维加斯-手机畅享(主力), 日本01-手机畅享, 韩国01-手机畅享, 新加坡01-手机畅享, 韩国02-手机畅享, 新加坡02-手机畅享, 瑞士-rl(主力), 德国法兰克福-rl(多线聚合), 新加坡Lisa-rl, 新加坡Lisa-hy2hop, Scaleway荷兰极速-hy2(主力), 美国洛杉矶LA-hy2hop(主力ovo), 美国洛杉矶LA-hy2hop(主力qvq), 美国LisaMNZ-hy2hop(主力ovo), 美国LisaMNZ-hy2hop(主力qvq), 美国LisaLAX-hy2hop(主力A), 美国LisaSFO-hy2hop(主力A), 美国LisaSFO-hy2hop(主力B), 美国LisaLAX-hy2hop(主力B), 美国LisaLAX-hy2hop(主力C), 美国LisaLAX-hy2hop(主力D), 德国法兰克福-hy2hop(主力), 瑞士-hy2hop(主力), 加拿大极速-rl, 法国-rl, 美国休斯顿DN1(电信)-rl, 美国休斯顿DN2(电信)-rl, 加拿大极速-hy2hop, 美国休斯顿DN1(电信)-hy2hop, 美国休斯顿DN2(电信)-hy2hop, 德国法兰克福-hy2hop(多线聚合), 英国01-rl, 英国02-rl, 印度-rl, 英国01-hy2hop, 英国02-hy2hop, 印度-hy2hop, 德国01-rl, 德国02-rl, 德国03-rl, 德国04-rl, 越南河内1-rl(移动优选), 越南河内1-hy2hop(移动), 越南河内2-rl(移动优选), 越南河内2-hy2hop(移动), 越南河内3-rl(移动优选), 越南河内3-hy2hop(移动), 越南河内4-rl(移动优选), 越南河内4-hy2hop(移动), 越南胡志明-rl, 越南胡志明-hy2hop, 越南胡志明-手机畅享, 美国极速芝加哥-rl, 爱尔兰Dublin-rl, 美国芝加哥-hy2hop, Premium-台湾顶级商宽-新北2, Premium-土耳其顶级商宽01, 美国极速01-rl, 美国极速02-rl, 美国极速03-rl, 美国极速04-rl, 美国极速05-rl, 美国极速06-rl, 美国极速07-rl, 美国极速08-rl, 美国极速09-rl, 美国极速10-rl, 美国极速11-rl, 美国极速12-rl, 美国极速13-rl, 美国极速14-rl, 美国极速15-rl, 美国极速16-rl, 新加坡01-rl, 新加坡02-rl, 香港RIPENCC-rl, 香港极速版-rl, Premium体验-日本极速-rl, 香港HKT01-rl, 香港HKT02-rl, 香港HKT-hy2hop, 香港RIPENCC-手机畅享, 香港HKT-手机极速版, 香港HKT-手机畅享1, 香港HKT-手机畅享2, 香港HKT-手机畅享3, 日本01-rl, 俄罗斯CN2-rl, 乌克兰-rl, 美国极速01-hy2hop, 美国极速02-hy2hop, 美国极速03-hy2hop, 美国极速04-hy2hop, 美国极速05-hy2hop, 美国极速06-hy2hop, 美国极速07-hy2hop, 美国极速08-hy2hop, 美国极速09-hy2hop, 美国极速10-hy2hop, 美国极速11-hy2hop, 美国极速12-hy2hop, 美国极速13-hy2hop, 美国极速14-hy2hop, 美国极速15-hy2hop, 美国极速16-hy2hop, 美国ccsLA1-hy2hop(电信联通), 美国ccsLA2-hy2hop(电信联通), 美国ccsLA3-hy2hop(电信联通), 美国ccsLA4-hy2hop(电信联通), 美国ccsLA5-hy2hop(电信联通), 德国01-hy2hop, 德国02-hy2hop, 德国03-hy2hop, 德国04-hy2hop, 爱尔兰Dublin-hy2hop, 【2024之前的软件无法使用】, 【用不了下载本站最新软件】] }
+    - { name: 自动选择, type: url-test, proxies: [✅官网续费vgvg.vg关vpn访问✅, '🎉rst:14d/99.99 GB/返佣:60%🎉', '⚠️exp:20260407没网卸旧装新⚠️', 美国-DAL大带宽-rl(主力), 美国-美西极速-rl(主力), Scaleway荷兰极速-rl(主力), 美国-LA极速ccs-rl(主力), 美国-LA大带宽-rl(禁联通), 美国LisaSFO-rl(主力A), 美国LisaSFO-rl(主力B), 美国-美西极速-手机畅享(主力), Scaleway荷兰极速-手机畅享(主力), 拉斯维加斯-rl(主力), 德国法兰克福-rl(主力), 美国LisaLAX-rl(主力B), 美国LisaLAX-rl(主力C), 美国LisaLAX-rl(主力D), 美国LisaLAX-rl(主力A), 美国LisaMNZ-rl(主力qvq), 美国LisaMNZ-rl(主力ovo), 德国法兰克福-手机畅享(多线聚合), 美国洛杉矶LA-手机畅享(主力ovo), 美国洛杉矶LA-手机畅享(主力qvq), 德国法兰克福-手机畅享(主力), 拉斯维加斯-手机畅享(主力), 日本01-手机畅享, 韩国01-手机畅享, 新加坡01-手机畅享, 韩国02-手机畅享, 新加坡02-手机畅享, 瑞士-rl(主力), 德国法兰克福-rl(多线聚合), 新加坡Lisa-rl, 新加坡Lisa-hy2hop, Scaleway荷兰极速-hy2(主力), 美国洛杉矶LA-hy2hop(主力ovo), 美国洛杉矶LA-hy2hop(主力qvq), 美国LisaMNZ-hy2hop(主力ovo), 美国LisaMNZ-hy2hop(主力qvq), 美国LisaLAX-hy2hop(主力A), 美国LisaSFO-hy2hop(主力A), 美国LisaSFO-hy2hop(主力B), 美国LisaLAX-hy2hop(主力B), 美国LisaLAX-hy2hop(主力C), 美国LisaLAX-hy2hop(主力D), 德国法兰克福-hy2hop(主力), 瑞士-hy2hop(主力), 加拿大极速-rl, 法国-rl, 美国休斯顿DN1(电信)-rl, 美国休斯顿DN2(电信)-rl, 加拿大极速-hy2hop, 美国休斯顿DN1(电信)-hy2hop, 美国休斯顿DN2(电信)-hy2hop, 德国法兰克福-hy2hop(多线聚合), 英国01-rl, 英国02-rl, 印度-rl, 英国01-hy2hop, 英国02-hy2hop, 印度-hy2hop, 德国01-rl, 德国02-rl, 德国03-rl, 德国04-rl, 越南河内1-rl(移动优选), 越南河内1-hy2hop(移动), 越南河内2-rl(移动优选), 越南河内2-hy2hop(移动), 越南河内3-rl(移动优选), 越南河内3-hy2hop(移动), 越南河内4-rl(移动优选), 越南河内4-hy2hop(移动), 越南胡志明-rl, 越南胡志明-hy2hop, 越南胡志明-手机畅享, 美国极速芝加哥-rl, 爱尔兰Dublin-rl, 美国芝加哥-hy2hop, Premium-台湾顶级商宽-新北2, Premium-土耳其顶级商宽01, 美国极速01-rl, 美国极速02-rl, 美国极速03-rl, 美国极速04-rl, 美国极速05-rl, 美国极速06-rl, 美国极速07-rl, 美国极速08-rl, 美国极速09-rl, 美国极速10-rl, 美国极速11-rl, 美国极速12-rl, 美国极速13-rl, 美国极速14-rl, 美国极速15-rl, 美国极速16-rl, 新加坡01-rl, 新加坡02-rl, 香港RIPENCC-rl, 香港极速版-rl, Premium体验-日本极速-rl, 香港HKT01-rl, 香港HKT02-rl, 香港HKT-hy2hop, 香港RIPENCC-手机畅享, 香港HKT-手机极速版, 香港HKT-手机畅享1, 香港HKT-手机畅享2, 香港HKT-手机畅享3, 日本01-rl, 俄罗斯CN2-rl, 乌克兰-rl, 美国极速01-hy2hop, 美国极速02-hy2hop, 美国极速03-hy2hop, 美国极速04-hy2hop, 美国极速05-hy2hop, 美国极速06-hy2hop, 美国极速07-hy2hop, 美国极速08-hy2hop, 美国极速09-hy2hop, 美国极速10-hy2hop, 美国极速11-hy2hop, 美国极速12-hy2hop, 美国极速13-hy2hop, 美国极速14-hy2hop, 美国极速15-hy2hop, 美国极速16-hy2hop, 美国ccsLA1-hy2hop(电信联通), 美国ccsLA2-hy2hop(电信联通), 美国ccsLA3-hy2hop(电信联通), 美国ccsLA4-hy2hop(电信联通), 美国ccsLA5-hy2hop(电信联通), 德国01-hy2hop, 德国02-hy2hop, 德国03-hy2hop, 德国04-hy2hop, 爱尔兰Dublin-hy2hop, 【2024之前的软件无法使用】, 【用不了下载本站最新软件】], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [✅官网续费vgvg.vg关vpn访问✅, '🎉rst:14d/99.99 GB/返佣:60%🎉', '⚠️exp:20260407没网卸旧装新⚠️', 美国-DAL大带宽-rl(主力), 美国-美西极速-rl(主力), Scaleway荷兰极速-rl(主力), 美国-LA极速ccs-rl(主力), 美国-LA大带宽-rl(禁联通), 美国LisaSFO-rl(主力A), 美国LisaSFO-rl(主力B), 美国-美西极速-手机畅享(主力), Scaleway荷兰极速-手机畅享(主力), 拉斯维加斯-rl(主力), 德国法兰克福-rl(主力), 美国LisaLAX-rl(主力B), 美国LisaLAX-rl(主力C), 美国LisaLAX-rl(主力D), 美国LisaLAX-rl(主力A), 美国LisaMNZ-rl(主力qvq), 美国LisaMNZ-rl(主力ovo), 德国法兰克福-手机畅享(多线聚合), 美国洛杉矶LA-手机畅享(主力ovo), 美国洛杉矶LA-手机畅享(主力qvq), 德国法兰克福-手机畅享(主力), 拉斯维加斯-手机畅享(主力), 日本01-手机畅享, 韩国01-手机畅享, 新加坡01-手机畅享, 韩国02-手机畅享, 新加坡02-手机畅享, 瑞士-rl(主力), 德国法兰克福-rl(多线聚合), 新加坡Lisa-rl, 新加坡Lisa-hy2hop, Scaleway荷兰极速-hy2(主力), 美国洛杉矶LA-hy2hop(主力ovo), 美国洛杉矶LA-hy2hop(主力qvq), 美国LisaMNZ-hy2hop(主力ovo), 美国LisaMNZ-hy2hop(主力qvq), 美国LisaLAX-hy2hop(主力A), 美国LisaSFO-hy2hop(主力A), 美国LisaSFO-hy2hop(主力B), 美国LisaLAX-hy2hop(主力B), 美国LisaLAX-hy2hop(主力C), 美国LisaLAX-hy2hop(主力D), 德国法兰克福-hy2hop(主力), 瑞士-hy2hop(主力), 加拿大极速-rl, 法国-rl, 美国休斯顿DN1(电信)-rl, 美国休斯顿DN2(电信)-rl, 加拿大极速-hy2hop, 美国休斯顿DN1(电信)-hy2hop, 美国休斯顿DN2(电信)-hy2hop, 德国法兰克福-hy2hop(多线聚合), 英国01-rl, 英国02-rl, 印度-rl, 英国01-hy2hop, 英国02-hy2hop, 印度-hy2hop, 德国01-rl, 德国02-rl, 德国03-rl, 德国04-rl, 越南河内1-rl(移动优选), 越南河内1-hy2hop(移动), 越南河内2-rl(移动优选), 越南河内2-hy2hop(移动), 越南河内3-rl(移动优选), 越南河内3-hy2hop(移动), 越南河内4-rl(移动优选), 越南河内4-hy2hop(移动), 越南胡志明-rl, 越南胡志明-hy2hop, 越南胡志明-手机畅享, 美国极速芝加哥-rl, 爱尔兰Dublin-rl, 美国芝加哥-hy2hop, Premium-台湾顶级商宽-新北2, Premium-土耳其顶级商宽01, 美国极速01-rl, 美国极速02-rl, 美国极速03-rl, 美国极速04-rl, 美国极速05-rl, 美国极速06-rl, 美国极速07-rl, 美国极速08-rl, 美国极速09-rl, 美国极速10-rl, 美国极速11-rl, 美国极速12-rl, 美国极速13-rl, 美国极速14-rl, 美国极速15-rl, 美国极速16-rl, 新加坡01-rl, 新加坡02-rl, 香港RIPENCC-rl, 香港极速版-rl, Premium体验-日本极速-rl, 香港HKT01-rl, 香港HKT02-rl, 香港HKT-hy2hop, 香港RIPENCC-手机畅享, 香港HKT-手机极速版, 香港HKT-手机畅享1, 香港HKT-手机畅享2, 香港HKT-手机畅享3, 日本01-rl, 俄罗斯CN2-rl, 乌克兰-rl, 美国极速01-hy2hop, 美国极速02-hy2hop, 美国极速03-hy2hop, 美国极速04-hy2hop, 美国极速05-hy2hop, 美国极速06-hy2hop, 美国极速07-hy2hop, 美国极速08-hy2hop, 美国极速09-hy2hop, 美国极速10-hy2hop, 美国极速11-hy2hop, 美国极速12-hy2hop, 美国极速13-hy2hop, 美国极速14-hy2hop, 美国极速15-hy2hop, 美国极速16-hy2hop, 美国ccsLA1-hy2hop(电信联通), 美国ccsLA2-hy2hop(电信联通), 美国ccsLA3-hy2hop(电信联通), 美国ccsLA4-hy2hop(电信联通), 美国ccsLA5-hy2hop(电信联通), 德国01-hy2hop, 德国02-hy2hop, 德国03-hy2hop, 德国04-hy2hop, 爱尔兰Dublin-hy2hop, 【2024之前的软件无法使用】, 【用不了下载本站最新软件】], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+rules:
+    - 'IP-CIDR,8.8.8.8/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,1.1.1.1/32,一元机场.VIP,no-resolve'
+    - 'DOMAIN-SUFFIX,services.googleapis.cn,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,一元机场.VIP'
+    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+    - 'DOMAIN,developer.apple.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,digicert.com,一元机场.VIP'
+    - 'DOMAIN,ocsp.apple.com,一元机场.VIP'
+    - 'DOMAIN,doh.dns.apple.com,一元机场.VIP'
+    - 'DOMAIN,dns.google,一元机场.VIP'
+    - 'DOMAIN,ocsp.comodoca.com,一元机场.VIP'
+    - 'DOMAIN,ocsp.usertrust.com,一元机场.VIP'
+    - 'DOMAIN,ocsp.sectigo.com,一元机场.VIP'
+    - 'DOMAIN,ocsp.verisign.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,apple-dns.net,一元机场.VIP'
+    - 'DOMAIN,testflight.apple.com,一元机场.VIP'
+    - 'DOMAIN,sandbox.itunes.apple.com,一元机场.VIP'
+    - 'DOMAIN,itunes.apple.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,apps.apple.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blobstore.apple.com,一元机场.VIP'
+    - 'DOMAIN,cvws.icloud-content.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+    - 'DOMAIN-KEYWORD,xiaohongshu,DIRECT'
+    - 'DOMAIN-KEYWORD,xhs,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+    - 'DOMAIN-SUFFIX,me.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+    - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+    - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.net,DIRECT'
+    - 'DOMAIN-SUFFIX,127.net,DIRECT'
+    - 'DOMAIN-SUFFIX,163.com,DIRECT'
+    - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+    - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+    - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+    - 'DOMAIN-KEYWORD,alipay,DIRECT'
+    - 'DOMAIN-KEYWORD,taobao,DIRECT'
+    - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+    - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+    - 'DOMAIN-KEYWORD,baidu,DIRECT'
+    - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+    - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+    - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+    - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+    - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+    - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+    - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+    - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+    - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+    - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+    - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+    - 'DOMAIN-SUFFIX,le.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoft.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,microsoftonline.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+    - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+    - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+    - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+    - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+    - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+    - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+    - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+    - 'DOMAIN-KEYWORD,amazon,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,google,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,gmail,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,youtube,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,facebook,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fb.me,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fbcdn.net,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,twitter,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,x,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,ai,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,gpt,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,instagram,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,dropbox,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,twimg.com,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,blogspot,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,youtu.be,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,whatsapp,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,admarvel,REJECT'
+    - 'DOMAIN-KEYWORD,admaster,REJECT'
+    - 'DOMAIN-KEYWORD,adsage,REJECT'
+    - 'DOMAIN-KEYWORD,adsmogo,REJECT'
+    - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
+    - 'DOMAIN-KEYWORD,adwords,REJECT'
+    - 'DOMAIN-KEYWORD,adservice,REJECT'
+    - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
+    - 'DOMAIN-KEYWORD,domob,REJECT'
+    - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
+    - 'DOMAIN-KEYWORD,duomeng,REJECT'
+    - 'DOMAIN-KEYWORD,dwtrack,REJECT'
+    - 'DOMAIN-KEYWORD,guanggao,REJECT'
+    - 'DOMAIN-KEYWORD,lianmeng,REJECT'
+    - 'DOMAIN-SUFFIX,mmstat.com,REJECT'
+    - 'DOMAIN-KEYWORD,mopub,REJECT'
+    - 'DOMAIN-KEYWORD,omgmta,REJECT'
+    - 'DOMAIN-KEYWORD,openx,REJECT'
+    - 'DOMAIN-KEYWORD,partnerad,REJECT'
+    - 'DOMAIN-KEYWORD,pingfore,REJECT'
+    - 'DOMAIN-KEYWORD,supersonicads,REJECT'
+    - 'DOMAIN-KEYWORD,uedas,REJECT'
+    - 'DOMAIN-KEYWORD,umeng,REJECT'
+    - 'DOMAIN-KEYWORD,usage,REJECT'
+    - 'DOMAIN-SUFFIX,vungle.com,REJECT'
+    - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
+    - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+    - 'DOMAIN-SUFFIX,9to5mac.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,abpchina.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,adblockplus.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,adobe.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,akamaized.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,alfredapp.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,amplitude.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ampproject.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,android.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,angularjs.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,aolcdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,apkpure.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,appledaily.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,appshopper.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,appspot.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,arcgis.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,archive.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,armorgames.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,aspnetcdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,att.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,awsstatic.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,azureedge.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,azurewebsites.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bing.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bintray.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bit.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bit.ly,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bitbucket.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bjango.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bkrtx.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blog.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blogcdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blogger.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blogsmithmedia.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blogspot.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,blogspot.hk,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,bloomberg.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,box.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,box.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cachefly.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,chromium.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cl.ly,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cloudflare.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cloudfront.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cloudmagic.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cmail19.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cnet.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,cocoapods.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,comodoca.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,crashlytics.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,culturedcode.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,d.pr,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,danilo.to,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,dayone.me,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,db.tt,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,deskconnect.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,disq.us,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,disqus.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,disquscdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,dnsimple.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,docker.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,dribbble.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,droplr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,duckduckgo.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,dueapp.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,dytt8.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,edgecastcdn.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,edgekey.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,edgesuite.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,engadget.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,entrust.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,eurekavpt.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,evernote.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fabric.io,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fast.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fastly.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fc2.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,feedburner.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,feedly.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,feedsportal.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,fiftythree.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,firebaseio.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,flexibits.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,flickr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,flipboard.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,g.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gabia.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,geni.us,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gfx.ms,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ggpht.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ghostnoteapp.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,git.io,一元机场.VIP'
+    - 'DOMAIN-KEYWORD,github,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,globalsign.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gmodules.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,godaddy.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,golang.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gongm.in,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,goo.gl,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,goodreaders.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,goodreads.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gravatar.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gstatic.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,gvt0.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,hockeyapp.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,hotmail.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,icons8.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ifixit.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ift.tt,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ifttt.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,iherb.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,imageshack.us,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,img.ly,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,imgur.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,imore.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,instapaper.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ipn.li,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,is.gd,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,issuu.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,itgonglun.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,itun.es,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ixquick.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,j.mp,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,js.revsci.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,jshint.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,jtvnw.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,justgetflux.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,kat.cr,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,klip.me,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,libsyn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,linkedin.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,line-apps.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,linode.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,lithium.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,littlehj.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,live.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,live.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,livefilestore.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,llnwd.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,macid.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,macromedia.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,macrumors.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mashable.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mathjax.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,medium.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mega.co.nz,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mega.nz,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,megaupload.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,microsofttranslator.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mindnode.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,mobile01.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,modmyi.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,msedge.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,myfontastic.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,name.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,nextmedia.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,nsstatic.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,nssurge.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,nyt.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,nytimes.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,omnigroup.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,onedrive.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,onenote.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ooyala.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,openvpn.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,openwrt.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,orkut.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,osxdaily.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,outlook.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ow.ly,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,paddleapi.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,parallels.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,parse.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pdfexpert.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,periscope.tv,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pinboard.in,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pinterest.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pixelmator.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pixiv.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,playpcesor.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,playstation.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,playstation.com.hk,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,playstation.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,playstationnetwork.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,pushwoosh.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,rime.im,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,servebom.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sfx.ms,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,shadowsocks.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sharethis.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,shazam.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,skype.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,smartdns一元机场.VIP.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,smartmailcloud.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sndcdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sony.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,soundcloud.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sourceforge.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,spotify.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,squarespace.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,sstatic.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,st.luluku.pw,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,stackoverflow.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,startpage.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,staticflickr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,steamcommunity.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,symauth.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,symcb.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,symcd.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tapbots.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tapbots.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tdesktop.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,techcrunch.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,techsmith.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,thepiratebay.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,theverge.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,time.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,timeinc.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tiny.cc,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tinypic.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tmblr.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,todoist.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,trello.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,trustasiassl.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tumblr.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tumblr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tweetdeck.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,tweetmarker.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,twitch.tv,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,txmblr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,typekit.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ubertags.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ublock.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ubnt.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ulyssesapp.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,urchin.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,usertrust.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,v.gd,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,v2ex.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vimeo.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vimeocdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vine.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vivaldi.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vox-cdn.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vsco.co,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,vultr.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,w.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,w3schools.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,webtype.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wikiwand.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wikileaks.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wikimedia.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wikipedia.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wikipedia.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,windows.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,windows.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wire.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wordpress.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,workflowy.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wp.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wsj.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,wsj.net,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,xda-developers.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,xeeno.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,xiti.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,yahoo.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,yimg.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ying.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,yoyo.org,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,ytimg.com,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,telegra.ph,一元机场.VIP'
+    - 'DOMAIN-SUFFIX,telegram.org,一元机场.VIP'
+    - 'IP-CIDR,91.108.4.0/22,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,91.108.8.0/21,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,91.108.16.0/22,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,91.108.56.0/22,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,149.154.160.0/20,一元机场.VIP,no-resolve'
+    - 'IP-CIDR6,2001:67c:4e8::/48,一元机场.VIP,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23d::/48,一元机场.VIP,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23f::/48,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.232.181.162/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.241.147.226/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.253.253.226/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.253.255.162/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.253.255.34/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,120.253.255.98/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,180.163.150.162/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,180.163.150.34/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,180.163.151.162/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,180.163.151.34/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,203.208.39.0/24,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,203.208.40.0/24,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,203.208.41.0/24,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,203.208.43.0/24,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,203.208.50.0/24,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,220.181.174.162/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,220.181.174.226/32,一元机场.VIP,no-resolve'
+    - 'IP-CIDR,220.181.174.34/32,一元机场.VIP,no-resolve'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'MATCH,一元机场.VIP'

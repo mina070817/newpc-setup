@@ -7,25 +7,15 @@ socks-port: 7898
 port: 7899
 log-level: info
 allow-lan: false
-ipv6: true
 mode: rule
 external-controller: 127.0.0.1:9097
-external-controller-unix: /tmp/verge/verge-mihomo.sock
+secret: ''
 tun:
-  enable: false
   stack: gvisor
+  device: Mihomo
   auto-route: true
   strict-route: false
   auto-detect-interface: true
   dns-hijack:
   - any:53
-secret: set-your-secret
-external-controller-cors:
-  allow-private-network: true
-  allow-origins:
-  - tauri://localhost
-  - http://tauri.localhost
-  - https://yacd.metacubex.one
-  - https://metacubex.github.io
-  - https://board.zash.run.place
-unified-delay: true
+  mtu: 1500

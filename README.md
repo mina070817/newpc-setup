@@ -18,13 +18,14 @@ newpc-setup/
 │   ├── install_codex_ubuntu2004.sh / install_codex_ubuntu2204.sh
 │   ├── install_worklog_hook.sh              # Codex 会话工作日志钩子
 │   └── install_reuse_skill.sh               # 安装 reuse-first skill
-├── 配置/                      # 从旧电脑带过来的配置文件
-│   ├── zshrc                  # 定制 .zshrc，含 __HOME__ 占位符
+├── 配置/                      # 从 zzy-X830（机器狗本机）导出的当前配置
+│   ├── zshrc                  # 定制 .zshrc，含 __HOME__ 占位符（含机器狗 ROS 变量，见提示词第 1 节）
 │   ├── fzf.zsh                # fzf 的 zsh 集成（备用）
-│   ├── clash-proxy.sh         # 开终端自动探测 Clash 端口，按需注入/清除代理变量
+│   ├── clash-proxy.sh         # 开终端探测 Clash 端口，按需注入/清除代理变量（no_proxy 已含机器狗 IP）
 │   ├── set_proxy_gui.sh       # 图形化把代理写进 /etc/profile.d/proxy.sh
-│   ├── work-log.sh            # SessionStart 钩子脚本：每次开 Codex 会话建一个日志文件
-│   └── hooks.json             # Codex 钩子注册文件（SessionStart -> work-log.sh）
+│   ├── work-log.sh            # SessionStart 钩子：每次开 Codex 会话在 <日期>/上装/ 建日志文件
+│   ├── hooks.json             # Codex 钩子注册文件（SessionStart -> work-log.sh）
+│   └── codex-AGENTS.md        # 可选：~/.codex/AGENTS.md 的副本（工作日志约定），覆盖前先看内容
 ├── autostart/                 # 开机自启的 .desktop 项
 │   ├── Clash Verge.desktop
 │   └── set-proxy.desktop      # 登录时弹窗设置代理
@@ -44,6 +45,7 @@ newpc-setup/
 | 开机代理 | Clash Verge Rev，并在开终端时自动注入代理变量 | `clash-verge-config/` + `配置/clash-proxy.sh` + `autostart/` |
 | Codex CLI（可选） | 装 Codex CLI 并接入 DeepSeek | `脚本/install_codex_ubuntu*.sh` + `codex安装.md` |
 | Codex 工作日志（可选） | 每次开 Codex 会话，自动建好 `<日期>/上装/` 并在里面按序号新建日志文件 | `脚本/install_worklog_hook.sh` + `配置/work-log.sh` + `配置/hooks.json` |
+| Codex 笔记约定（可选） | 把「笔记一律放 `codex_create_note/<日期>/上装/`」写进全局指引，以后不用每次交代 | `配置/codex-AGENTS.md` |
 | reuse-first skill（可选） | 动手写脚本/工具前先搜 GitHub 有没有现成方案，避免重复造轮子 | `脚本/install_reuse_skill.sh` + `skills/reuse-first/` |
 
 ## 怎么用
@@ -94,12 +96,15 @@ bash ~/Desktop/newpc-setup/脚本/install_codex_ubuntu2204.sh
 
 # 6. 可选：Codex 会话工作日志钩子（不要加 sudo）
 bash ~/Desktop/newpc-setup/脚本/install_worklog_hook.sh
+#    可选：再把「笔记放哪」的约定写进 Codex 全局指引
+#    （新电脑已有 ~/.codex/AGENTS.md 时先看内容，合并而不是直接覆盖）
+cp ~/Desktop/newpc-setup/配置/codex-AGENTS.md ~/.codex/AGENTS.md
 
 # 7. 可选：reuse-first skill（不要加 sudo）
 bash ~/Desktop/newpc-setup/脚本/install_reuse_skill.sh
 ```
 
-`配置/zshrc` 是从旧电脑带过来的，里面有些路径只在本机存在（opencode、anaconda3、ROS 2 Humble、turtlebot3 工作空间等）。新电脑上没有的要整行注释掉，否则每次开终端都会报错。必须保留的是 `ZSH_THEME`、`plugins=(...)`、npm global bin 那行，以及最后加载 `~/.codex/clash-proxy.sh` 的两行。逐项清单见 `提示词.md` 第 1 节。
+`配置/zshrc` 是 `zzy-X830`（机器狗本机）当前在用的那一份，里面有些路径只在本机存在（opencode、anaconda3、ROS 2 Humble、turtlebot3 工作空间等，前几个本机已注释掉）。新电脑上没有的要整行注释掉，否则每次开终端都会报错。**注意里面还有两行机器狗专用的 `ROS_MASTER_URI` / `ROS_IP`（都指向 `192.168.123.1`），新电脑不是机器狗本体的话必须改掉或注释掉。** 必须保留的是 `ZSH_THEME`、`plugins=(...)`、npm global bin 那行，以及最后加载 `~/.codex/clash-proxy.sh` 的两行。逐项清单见 `提示词.md` 第 1 节。
 
 ## 必读注意事项
 

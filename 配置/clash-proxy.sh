@@ -18,9 +18,13 @@ CLASH_YAML="$VERGE_DIR/clash-verge.yaml"
 VERGE_YAML="$VERGE_DIR/verge.yaml"
 ENV_FILE="${CODEX_HOME:-$HOME/.codex}/.env"
 
-MIXED="${CLASH_MIXED_PORT:-}"
-SOCKS="${CLASH_SOCKS_PORT:-}"
-HTTP="${CLASH_HTTP_PORT:-}"
+# 2026-10-08 用户指定的固定代理端口（不再依赖读 Clash Verge 的 yaml 自动探测）：
+#   http/https = http://127.0.0.1:7897
+#   socks/all  = socks5://127.0.0.1:7897
+# 仍可用环境变量临时覆盖：CLASH_MIXED_PORT / CLASH_SOCKS_PORT / CLASH_HTTP_PORT
+MIXED="${CLASH_MIXED_PORT:-7897}"
+SOCKS="${CLASH_SOCKS_PORT:-7897}"
+HTTP="${CLASH_HTTP_PORT:-7897}"
 
 # 从 yaml 读取数字型配置项
 get_val() {
