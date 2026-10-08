@@ -43,7 +43,7 @@ newpc-setup/
 | 护眼模式 | redshift 蓝光过滤，色温 4500K，开机自启 | `脚本/install_redshift_eyecare.sh` |
 | 开机代理 | Clash Verge Rev，并在开终端时自动注入代理变量 | `clash-verge-config/` + `配置/clash-proxy.sh` + `autostart/` |
 | Codex CLI（可选） | 装 Codex CLI 并接入 DeepSeek | `脚本/install_codex_ubuntu*.sh` + `codex安装.md` |
-| Codex 工作日志（可选） | 每次开 Codex 会话，自动在桌面生成当日工作日志文件 | `脚本/install_worklog_hook.sh` + `配置/work-log.sh` + `配置/hooks.json` |
+| Codex 工作日志（可选） | 每次开 Codex 会话，自动建好 `<日期>/上装/` 并在里面按序号新建日志文件 | `脚本/install_worklog_hook.sh` + `配置/work-log.sh` + `配置/hooks.json` |
 | reuse-first skill（可选） | 动手写脚本/工具前先搜 GitHub 有没有现成方案，避免重复造轮子 | `脚本/install_reuse_skill.sh` + `skills/reuse-first/` |
 
 ## 怎么用
@@ -115,7 +115,9 @@ bash ~/Desktop/newpc-setup/脚本/install_reuse_skill.sh
 - **Wayland 会踩坑**：搜狗输入法只在 Xorg 会话下稳定；redshift 的 `adjustment-method=randr` 在 Wayland 下失效。装完注销，在登录界面点右下角齿轮选 **Ubuntu on Xorg** 再登录。
 - **隐私**：`clash-verge-config/` 里有机场订阅和节点信息，`codex安装.md` 里有代理凭据，别把这个文件夹往外传。
 - **Codex 钩子要授权**：装完工作日志钩子后，第一次开新会话 Codex 会问是否信任该钩子，选信任/允许，之后才会自动建日志文件。
-- **日志目录名可各机不同**：改 `~/.codex/work-log.sh` 里的 `note_name` 就能换日志根目录（默认 `cyf_note`）；重跑 `install_worklog_hook.sh` 会保留本机已改过的名字，不会被仓库默认值冲掉。
+- **日志落点写死在一处**：钩子默认把日志建到 `~/Desktop/codex_create_note/<日期>/上装/N.md`（日期文件夹和 `上装/` 自动创建，序号 = 已有序号最大值 + 1，只新建不覆盖）。
+  三行参数在 `~/.codex/work-log.sh` 顶部：`repo_name`（默认 `codex_create_note`）、`note_subdir`（默认 `上装`）、`note_name`（默认 `cyf_note`，仅在仓库目录不存在时兜底）。
+  重跑 `install_worklog_hook.sh` 会保留本机已改过的 `note_name`，不会被仓库默认值冲掉。
 - **联网**：素材绝大多数是离线的，只有 zsh 那步（Oh My Zsh、两个插件）和 Clash Verge 本体需要联网。GitHub 拉不动时先配好代理再跑。
 - **幂等**：各脚本都有「已存在就跳过」的判断，在配好的机器上重复跑一般安全；`install_redshift_eyecare.sh` 覆盖前会先备份 `~/.config/redshift.conf`。
 - **跑完可删**：全部配好后 `newpc-setup/` 就可以删掉；删之前先确认不再需要里面的订阅信息。
