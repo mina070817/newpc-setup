@@ -15,12 +15,15 @@ newpc-setup/
 │   ├── install_zsh_ubuntu2004.sh / install_zsh_ubuntu2204.sh
 │   ├── install_sogou_ubuntu2004.sh / install_sogou_ubuntu2204.sh
 │   ├── install_redshift_eyecare.sh          # 20.04 / 22.04 通用
-│   └── install_codex_ubuntu2004.sh / install_codex_ubuntu2204.sh
+│   ├── install_codex_ubuntu2004.sh / install_codex_ubuntu2204.sh
+│   └── install_worklog_hook.sh              # Codex 会话工作日志钩子
 ├── 配置/                      # 从旧电脑带过来的配置文件
 │   ├── zshrc                  # 定制 .zshrc，含 __HOME__ 占位符
 │   ├── fzf.zsh                # fzf 的 zsh 集成（备用）
 │   ├── clash-proxy.sh         # 开终端自动探测 Clash 端口，按需注入/清除代理变量
-│   └── set_proxy_gui.sh       # 图形化把代理写进 /etc/profile.d/proxy.sh
+│   ├── set_proxy_gui.sh       # 图形化把代理写进 /etc/profile.d/proxy.sh
+│   ├── work-log.sh            # SessionStart 钩子脚本：每次开 Codex 会话建一个日志文件
+│   └── hooks.json             # Codex 钩子注册文件（SessionStart -> work-log.sh）
 ├── autostart/                 # 开机自启的 .desktop 项
 │   ├── Clash Verge.desktop
 │   └── set-proxy.desktop      # 登录时弹窗设置代理
@@ -37,6 +40,7 @@ newpc-setup/
 | 护眼模式 | redshift 蓝光过滤，色温 4500K，开机自启 | `脚本/install_redshift_eyecare.sh` |
 | 开机代理 | Clash Verge Rev，并在开终端时自动注入代理变量 | `clash-verge-config/` + `配置/clash-proxy.sh` + `autostart/` |
 | Codex CLI（可选） | 装 Codex CLI 并接入 DeepSeek | `脚本/install_codex_ubuntu*.sh` + `codex安装.md` |
+| Codex 工作日志（可选） | 每次开 Codex 会话，自动在桌面生成当日工作日志文件 | `脚本/install_worklog_hook.sh` + `配置/work-log.sh` + `配置/hooks.json` |
 
 ## 怎么用
 
@@ -83,6 +87,9 @@ cp ~/Desktop/newpc-setup/autostart/"Clash Verge.desktop" ~/.config/autostart/
 
 # 5. 可选：Codex CLI
 bash ~/Desktop/newpc-setup/脚本/install_codex_ubuntu2204.sh
+
+# 6. 可选：Codex 会话工作日志钩子（不要加 sudo）
+bash ~/Desktop/newpc-setup/脚本/install_worklog_hook.sh
 ```
 
 `配置/zshrc` 是从旧电脑带过来的，里面有些路径只在本机存在（opencode、anaconda3、ROS 2 Humble、turtlebot3 工作空间等）。新电脑上没有的要整行注释掉，否则每次开终端都会报错。必须保留的是 `ZSH_THEME`、`plugins=(...)`、npm global bin 那行，以及最后加载 `~/.codex/clash-proxy.sh` 的两行。逐项清单见 `提示词.md` 第 1 节。
@@ -91,6 +98,7 @@ bash ~/Desktop/newpc-setup/脚本/install_codex_ubuntu2204.sh
 
 - **Wayland 会踩坑**：搜狗输入法只在 Xorg 会话下稳定；redshift 的 `adjustment-method=randr` 在 Wayland 下失效。装完注销，在登录界面点右下角齿轮选 **Ubuntu on Xorg** 再登录。
 - **隐私**：`clash-verge-config/` 里有机场订阅和节点信息，`codex安装.md` 里有代理凭据，别把这个文件夹往外传。
+- **Codex 钩子要授权**：装完工作日志钩子后，第一次开新会话 Codex 会问是否信任该钩子，选信任/允许，之后才会自动建日志文件。
 - **联网**：素材绝大多数是离线的，只有 zsh 那步（Oh My Zsh、两个插件）和 Clash Verge 本体需要联网。GitHub 拉不动时先配好代理再跑。
 - **幂等**：各脚本都有「已存在就跳过」的判断，在配好的机器上重复跑一般安全；`install_redshift_eyecare.sh` 覆盖前会先备份 `~/.config/redshift.conf`。
 - **跑完可删**：全部配好后 `newpc-setup/` 就可以删掉；删之前先确认不再需要里面的订阅信息。

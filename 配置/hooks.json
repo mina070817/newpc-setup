@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $HOME/.codex/work-log.sh",
+            "timeout": 10,
+            "statusMessage": "创建工作日志..."
+          }
+        ]
+      }
+    ]
+  }
+}
